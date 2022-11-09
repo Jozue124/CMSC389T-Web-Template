@@ -10,5 +10,6 @@ WORKDIR /app
 COPY package.json ./
 RUN npm install 
 USER node
-EXPOSE 8080
+EXPOSE 80
+COPY . ./
 CMD ["node", "app.js"]
