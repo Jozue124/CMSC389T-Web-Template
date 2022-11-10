@@ -3,13 +3,14 @@ on:
   workflow_dispatch:
 jobs:
   clone:
-    name: Clone
     runs-on: ubuntu-latest
     steps:
     - name: testing 
-      uses: jozue124/
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
+        script: |
+            git clone git@github.com:Jozue124/CMSC389T-Web-Template
