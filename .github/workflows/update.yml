@@ -1,6 +1,6 @@
 name: update workflow
 on:
-  workflow_dispatch:
+  [workflow_dispatch,push]
 jobs:
   clone:
     runs-on: ubuntu-latest
